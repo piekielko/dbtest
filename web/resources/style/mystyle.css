@@ -1,0 +1,26 @@
+
+.cialo1 {
+    background-color: linen; 
+    width: 800px; 
+    height: 700px;
+    text-align: left; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.cialo2 {
+    background-color: #99FFFF; 
+    width: 800px; 
+    height: 700px;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.nag_h1 {
+    background-color: linen;
+    text-align: center;
+}
+
+.td_con {
+    background-color: white;
+}
