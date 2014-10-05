@@ -5,11 +5,11 @@
         <title>Rejestracja</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="resources/style/mystyle.css" type="text/css"/>
+        <link rel="stylesheet" href="resources/style/mstyle.css" type="text/css"/>
 
     </head>
-    <body class="cialo1">
-        <div class="cialo2">
+    <body class="tlo0">
+        <div class="tlo1">
             <h1 class="nag_h1">Rejestracja użytkownika</h1>
             <hr/>
             <form method="post" action="confirm.jsp">
@@ -54,7 +54,16 @@
                                 <option>zachodniopomorskie</option>
                             </select>
                         </td>
-                    </tr>                
+                    </tr> 
+                    <tr>
+                        <td><label>sex:</label></td>
+                        <td><input type="radio" name="k" value="dziecko"/>Dziecko</td>
+                    </tr>
+                    <tr>
+                        <td><label>dzien</label></td>
+                        <td><input type="number" name="points"
+                                         min="0" max="100" step="10" value="30"></td>
+                    </tr>
                 </table>
                 <hr/>
                 <input type="submit" value="Zapisz"/>

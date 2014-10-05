@@ -20,24 +20,39 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="resources/style/mystyle.css" type="text/css"/>
+        <link rel="stylesheet" href="resources/style/mstyle.css" type="text/css"/>
         <title>Podsumowanie zapisania danych</title>
     </head>
     <!-- Laczenie z baza i zapisowanie START -->
    
     <%
-      //pobieram do kodu z post
+      //pobieram do kodu z post http parametry
       String imie          = (String)request.getParameter("i");  
-      
+      String nazwisko      = (String)request.getParameter("n");
+      String email      = (String)request.getParameter("e_m");
+      String plec      = (String)request.getParameter("p");
+      String wojewodztwo      = (String)request.getParameter("woj");
+      //Tworze polaczenie
       Class.forName("org.apache.derby.jdbc.ClientDriver");
       
       Connection con = DriverManager.getConnection
       ("jdbc:derby://localhost:1527/users","app","app");
       
+      //Tworze zapytanie do zapisu SQL 
       PreparedStatement updateemp = con.prepareStatement
-      ("insert into UDATA values(?)");
+      ("insert into UDATA values(?, ?, ?, ?, ?)");
       
+      // Uaktualniam zapytanie o dane
       updateemp.setString(1, imie);
+      updateemp.setString(2, nazwisko);
+      updateemp.setString(3, email);
+      updateemp.setString(4, plec);
+      updateemp.setString(5, wojewodztwo);
+      
+      /*updateemp.setString(3, email);
+      updateemp.setString(4, płeć);
+      updateemp.setString(5, województwo);*/
+      
       updateemp.executeUpdate();
       /*
       Statement stmt = con.createStatement();
@@ -52,8 +67,9 @@
 %>
   <!-- Laczenie z baza i zapisowanie STOP -->
   
-    <body>
-        <h1>Zapisano pomyślnie w bazie</h1>
+    <body class="tlo0">
+        <div class="tlo1">
+        <h1 class="nag_h1">Zapisano pomyślnie w bazie</h1>
     </body>
     <table>
                 <tr>
@@ -80,4 +96,6 @@
     <form action="index.html">
                 <input type="submit" value="Dodaj kolejnego użytkownika"/>
     </form>
+</div>
+    </body>
 </html>

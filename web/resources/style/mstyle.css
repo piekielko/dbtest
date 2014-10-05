@@ -1,0 +1,35 @@
+/*
+.tlo0 {
+    background-color: black; 
+    width: 900px; 
+    height: 700px;
+    text-align: left; 
+    margin-left: 2cm; 
+   
+}
+*/
+
+.tlo1 {
+    background-color: lightgrey; 
+    width: 900px; 
+    height: 700px;
+    font-family: verdana;
+    font-style: italic;
+    font-size: 15px;
+   
+}
+
+.nag_h1 {
+   /* background-color: linen;*/
+    text-align: left;
+    font-family: verdana;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.td_con {
+   /* background-color: white;*/
+    font-family: verdana;
+    font-style: italic;
+    font-size: 15px;
+}

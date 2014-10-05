@@ -3,13 +3,13 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" href="resources/style/mystyle.css" type="text/css"/>
+        <link rel="stylesheet" href="resources/style/mstyle.css" type="text/css"/>
         <title>Podsumowanie</title>
 
     </head>
-    <body class="cialo1">
-        <div class="cialo2">
-            <h1 class="nag_h1">Dane użytkownika</h1>
+    <body class="tlo0">
+        <div class="tlo1">
+            <h1 class="nag_h1">Podsumowanie danych użytkownika</h1>
             <hr/>
             <table>
                 <tr>
@@ -32,6 +32,10 @@
                     <td>Województwo:</td>
                     <td class="td_con">${param.woj}</td>
                 </tr>
+                <tr>
+                    <td>Sex:</td>
+                    <td class="td_con">${param.k}</td>
+                </tr>
             </table>
             <hr/>
             <form metod="post" action="index.html">
@@ -40,6 +44,7 @@
             </form>
             <form action="stored.jsp">
                 <input type="submit" value="Zapisz do bazy"/>
+                
                  <input type="hidden" name="i" value="${param.i}">
                  <input type="hidden" name="n" value="${param.n}">
                  <input type="hidden" name="e_m" value="${param.e_m}">
@@ -47,5 +52,6 @@
                  <input type="hidden" name="woj" value="${param.woj}">
                  
             </form>
-        </div></body>
+        </div>
+    </body>
 </html>
